@@ -1,0 +1,11 @@
+###########################
+# ignore build folder
+
+build
+build/
+
+###############
+# ignore dbs
+
+*.db
+
