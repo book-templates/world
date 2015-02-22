@@ -37,12 +37,12 @@ end
 
 
 def render_city( city, opts={} )
-  tmpl       = File.read_utf8( 'templates/shared/_city.md' )
+  tmpl       = File.read_utf8( '_templates/includes/_city.md' )
   TextUtils::PageTemplate.new( tmpl ).render( binding )
 end
 
 def render_city_idx( city, opts={} )
-  tmpl       = File.read_utf8( 'templates/shared/_city-idx.md' )
+  tmpl       = File.read_utf8( '_templates/includes/_city-idx.md' )
   TextUtils::PageTemplate.new( tmpl ).render( binding )
 end
 

@@ -41,7 +41,7 @@ require_relative 'book'
 ## build book (draft version) - The Free World Fact Book - from world.db
 
 build_book()                # multi-page version
-build_book( inline: true )  # all-in-one-page version a.k.a. inline version
+### build_book( inline: true )  # all-in-one-page version a.k.a. inline version
 
 puts 'Done.'
 
