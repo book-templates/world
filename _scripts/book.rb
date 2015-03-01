@@ -12,6 +12,9 @@ require_relative 'helpers/city'
 require_relative 'helpers/page'
 
 
+## quick fix/hack for settings globals; fix: use config hash etc.
+PAGES_DIR     = $pages_dir      if defined?( $pages_dir )
+TEMPLATES_DIR = $templates_dir  if defined?( $templates_dir )
 
 puts '[book]  Welcome'
 puts "[book]    Dir.pwd:       #{Dir.pwd}"
@@ -48,7 +51,7 @@ def build_book( opts={} )
 ### generate pages for countries
 # note: use same order as table of contents
 
-Continent.all.each do |continent|
+Continent.order(:id).each do |continent|
   continent.countries.order(:name).each do |country|
 
     puts "build country page #{country.key}..."
