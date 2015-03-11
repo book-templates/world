@@ -3,9 +3,11 @@
 ##########################
 # part helpers
 
+module HybookHelper
+
 
 #####
-# todo: find a better name for ender_toc_countries ??
+# todo: find a better name for render_toc_countries ??
 
 
 def render_toc_countries( countries, opts={} )
@@ -37,13 +39,18 @@ end
 
 
 def render_city( city, opts={} )
-  ## fix: use TemplateReader/Finder/Man ???
-  tmpl       = File.read_utf8( "#{TEMPLATES_DIR}/includes/_city.md" )
-  TextUtils::PageTemplate.new( tmpl ).render( binding )
+  render 'includes/_city', opts, city: city
+
+##  tmpl       = File.read_utf8( "#{TEMPLATES_DIR}/includes/_city.md" )
+##  TextUtils::PageTemplate.new( tmpl ).render( binding )
 end
 
 def render_city_idx( city, opts={} )
-  tmpl       = File.read_utf8( "#{TEMPLATES_DIR}/includes/_city-idx.md" )
-  TextUtils::PageTemplate.new( tmpl ).render( binding )
+  render 'includes/_city-idx', opts, city: city
+
+##  tmpl       = File.read_utf8( "#{TEMPLATES_DIR}/includes/_city-idx.md" )
+##  TextUtils::PageTemplate.new( tmpl ).render( binding )
 end
 
+
+end # module HybookHelper

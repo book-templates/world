@@ -1,6 +1,9 @@
+# encoding: utf-8
+
 ###############################
 # link helpers
 
+module HybookHelper
 
 def link_to_country( country, opts={} )
   if opts[:inline].nil?
@@ -12,4 +15,4 @@ def link_to_country( country, opts={} )
   end
 end
 
-
+end # module HybookHelper

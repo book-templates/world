@@ -3,6 +3,8 @@
 ##########################
 # part helpers
 
+module HybookHelper
+
 
 def continents_navbar    # use render? or just call method/helper continent_navbar ??
   buf = ''
@@ -60,3 +62,4 @@ def cities_navbar_for_region( region )
   end
 end
 
+end # module HybookHelper

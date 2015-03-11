@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+module HybookHelper
+
 def city_pop( city )
   buf = ''
   pops = []
@@ -10,4 +12,6 @@ def city_pop( city )
   buf << " _pop #{pops.join(' ')}_{:.pop}"  if pops.size > 0
   buf
 end
+
+end # module HybookHelper
 
